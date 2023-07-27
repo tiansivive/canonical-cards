@@ -1,45 +1,47 @@
-# Getting Started with Create React App
+# Canonical exercise
+
+
+## Running the app
+
+Clone this repo.
+In the project directory, run:
+
+```
+npm install
+```
+
+followed by
+```
+npm start
+``` 
+
+Thi runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you edit the code.\
+
+
+## Thoughts and Notes
+
+There wasn't much to go on in terms of API, I just in followed the provided [link](https://people.canonical.com/~anthonydillon/wp-json/wp/v2/posts.json) and inspected the `JSON` there.\
+I have a feeling some of the fields I'm accessing are "internal" but it got the job done. I looked into the WordPress API docs, [especially to fetch the author](https://developer.wordpress.org/rest-api/reference/users/#retrieve-a-user), but it didn't seem to work so I just used as much of the `v2/posts` endpoint as I could.
+
+Further enhancements could involve this part of the app, by subsequently fetching the required data using the response of the first request.
+Also typing out the API schema would be a good improvement. 
+
+Overall, I'd say this took me about 3h. I did the data fetching, error handling and state management in about 30min, pretty standard stuff.
+The rest of the time was mostly spent reading the Vanilla docs, figuring out how to use it.\
+I didn't notice there was a `react-components` package at first, so roughly the last hour was me just refactoring and trying to understand what pre-built components I could use.
+
+ 
+:rocket:
+
+     
+#### Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
+#### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 

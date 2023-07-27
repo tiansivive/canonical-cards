@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 
-import './App.css';
-import { Loading } from '../components/Loading';
-import { useLoadedData } from './fetch-data';
+import styles from './App.module.scss'
+
+import { useLoadedData } from './Post/fetch-data';
+import { Post } from './Post/Post';
+import { EmptyState, Row, Spinner } from '@canonical/react-components';
 
 function App() {
 
@@ -15,17 +17,17 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  if (data.status === "mount") return null
-  if (data.status === "loading") return <Loading />
+  if (data.status === "mount") return <EmptyState image={ <span></span> } title="This application doesn't have any configuration parameters" />
+  if (data.status === "loading") return <Spinner text="Loading..." />
   if (data.status === "error") return <div>{ JSON.stringify(data.error) }</div>
 
 
 
   return (
-    <div className="App">
-      <div>
-
-      </div>
+    <div className={ styles.container }>
+      <Row>
+        { data.value.map(Post) }
+      </Row>
     </div>
   );
 }

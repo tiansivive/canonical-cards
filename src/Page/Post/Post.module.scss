@@ -1,0 +1,13 @@
+
+.title {
+    height: 4em;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+}
+
+.image:hover {
+    cursor: pointer;
+}
